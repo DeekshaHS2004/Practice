@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index,follow">
+        <meta name="description" content="About my portfolio">
+        <meta name="author" content="DEEKSHA H S">
+        <title>Deeksha's Portfolio Website</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Urbanist:wght@300;400;600;700;800;900&display=swap");
+            html {
+              /* font-size: 62.5%; */
+              font-family: "jost", sans-serif;
+              background-color: #a09b9b;
+            }
+            h1 {
+              font-weight: bold;
+              font-size: 2rem;
+            }
+      
+            li {
+              list-style: none;
+            }
+      
+            li,
+            p,
+            label {
+              font-family: Urbanist;
+              letter-spacing: 0.06;
+              line-height: 1.6;
+              font-size: 1.4rem;
+            }
+            audio {
+              box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+              border-radius: 25px;
+            }
+            progress {
+              height: 2rem;
+              width: 20rem;
+            }
+             /* ul,
+      .service-section .service-gallery {
+        display: flex;
+        gap: 1rem;
+      } */
+    </style>
+    </head>
+    <body>
+        <!--our header-->
+        <header>
+            <div class ="logo">
+                <a href="#" tabindex="_blank">
+                    <img src="./logo.webp" alt="logo" width="130" height="150"/>
+                </a>
+            </div>
+            <nav>
+                <ul style="list-style:none; display:flex; gap:10px">
+                    <li> <a href="#" >Home  </a></li>
+                    <li> <a href="#" >About </a></li>
+                    <li> <a href="#" >Details </a></li>
+                    <li> <a href="#contact" >Contact </a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--our first hero section-->
+        <main>
+            <div class="hero-content">
+                <h1>My name is Deeksha H S</h1>
+                <p>I'm a student at C M R Institute of Technology pursing Bachelor's of Engineering in Information Science and Engineering.
+                </p>
+                <button>See my Works</button>
+                <a href="https://github.com/" target="_blank">
+                <button>Visit github</button></a>
+            </div>
+            <!--our first hero section image-->
+            <div class="hero-image">
+                <img src="./student logo.webp" alt="hero image section fo my portfolio" height="auto" width="400"/>
+            </div>
+        </main>
+        <section class="about-section">
+            <h2>About Myself</h2>
+            <div class="about-content">
+                <p>I'm a student at C M R Institute of Technology pursing Bachelor's of Engineering in Information Science and Engineering.
+                    My career objective is to secure a role, where I can effectively apply my knowledge to meet company goals and challenges. I aim to contribute with dedication and a strong work ethic. In return, I seek opportunities to enhance my skills and grow alongside the organization
+                </p>
+                <p><strong>My coding Knowledge</strong></p>
+                <div class="about progress">
+                    <label for="html">HTML</label>
+                    <progress id="html" max="100" value="80">HTML 80%</progress>
+                </div>
+                <div class="about progress">
+                    <label for="java">Java</label>
+                    <progress id="java" max="100" value="80">Java 80%</progress>
+                </div>
+                <div class="about progress">
+                    <label for="c">C Language</label>
+                    <progress id="c" max="100" value="60">C Language 60%</progress>
+                </div>
+            </div>
+        </section>
+        <!--Our services section-->
+        <section class="service-section">
+            <h2>Refernce videos watched to learn</h2>
+            <div class="services-gallery" style="display: flex">
+                <figure>
+                    <img src="./Html reference pic.png" alt="HTML Course" width="300" height="auto"/>
+                    <figcaption>HTML Course</figcaption>
+                </figure>
+                <figure>
+                    <img src="./channel logo.png" alt="Channel" width="300" height="auto"/>
+                    <figcaption>YouTube Channel</figcaption>
+                </figure>
+            </div>
+        </section>
+        <!--Our blog section-->
+        <section class="blog-services">
+            <h2>Extra-Curricular Activities</h2>
+            <article>
+                <h2>NSS Volunteering</h2>
+                <header>
+                    <p>
+                        Volunterred in <strong>Shristhi<em>(ART Department)</em></strong>- received a best volunteerring certificate .
+                    </p>
+                    <section>
+                        <h3>About Shristhi</h3>
+                        <p>
+                            Shristhi is a state level project exhibition organised by VTU occurs once in a year.It also has various competitions for the students to participate.
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Art Department</h3>
+                        <p>
+                            I was a part of art department in Shristhi.Our team received a best volunteering certificate for its organization and it's hardwork.
+                        </p>
+                    </section>
+                    <p>Thank for going through my portfolio</p>
+                </header>
+            </article>
+        </section>
+        <!--Podcast Section-
+        <section class="podcast-service">
+            <p>
+                <em>I have added wed development podcast from thapa technical click on to play button to play the audio</em>
+            </p>
+            <audio controls muted>
+                <source src="./audio_thapa.mp3" type="audio/mpeg" />
+                <source src="./audio_thapa.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+        </section>-->
+        <!--Other links-->
+        <section class="my works">
+            <p>My works and progress:</p>
+            <ul>
+                <li>
+                    <a href="https://leetcode.com/u/DeekshaHS/" target="_blank"> Please refer my leetcode progress</a>
+                </li>
+                <li>
+                    <a href="https://drive.google.com/file/d/13hU09MS1blkmH2fsD2JXZsgMM5taUlAP/view?usp=drive_link" target="_blank">Plete refer to my internship certificate</a>
+                </li>
+                <li>
+                    <a href="https://drive.google.com/file/d/1NcY5p3loSWft4TR6Uq3QE1DeJ_4LxNCV/view?usp=drive_link" target="_blank">Plefer refer the letter of recommendation from the above internship</a>
+                </li>
+            </ul>
+        </section>
+        <!--Contact Section-->
+        <section class="contact-section">
+            <h2>Feel free to contact</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62207.23583652385!2d77.6947882!3d12.974906599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13418a2f8949%3A0x7b04ba15f06122c6!2sRoyal%20palace%20PG%20for%20LADIES!5e0!3m2!1sen!2sin!4v1739460699131!5m2!1sen!2sin" 
+            width="600" 
+            height="450"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        </section>
+         <!-- form section  -->
+      <form>
+        <div>
+          <label for="username">Username</label>
+          <input type="text" id="username" />
+        </div>
+        <br />
+        <div>
+          <label for="email">Enter your email</label>
+          <input type="email" id="email" />
+        </div>
+        <br />
+        <div>
+          <label for="textarea">Message</label>
+          <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+        </div>
+        <br />
+        <input type="submit" value="submit" />
+      </form>
+    </section>
+
+    <!-- footer section  -->
+    <footer>
+      <p>
+        Copyright &copy;2023 All rights reserved | This template is made with ❤
+        by Deeksha H S
+      </p>
+    </footer>
+    </body>
+</html>

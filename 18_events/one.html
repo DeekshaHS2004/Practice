@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+</head>
+<body style="background-color:#414141; color:aliceblue;">
+  <h2>Images</h2>
+  <ul id="images">
+    <!-- Mountains -->
+    <li><img width="200px" id="Mountains" src="https://t3.ftcdn.net/jpg/02/70/35/00/360_F_270350073_WO6yQAdptEnAhYKM5GuA9035wbRnVJSr.jpg" alt="Mountains"></li>
+
+    <!-- Working Night View (alternative) 
+    <li><img width="200px" id="Night view" src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg" alt="Night view" onclick="alert('Night view')"></li>  
+    1st approach:don't use onclilk like this it is not scalable-->
+
+    <!-- Working Trees image (alternative) -->
+    <li><img width="200px" id="Trees" src="https://images.pexels.com/photos/167684/pexels-photo-167684.jpeg" alt="Trees"></li>
+    <!--onclick="alert('tree')" can be used after the alt in the above line-->
+    <!-- Bird -->
+    <li><img width="200px" id="Bird" src="https://st.depositphotos.com/2001755/3622/i/450/depositphotos_36220949-stock-photo-beautiful-landscape.jpg" alt="Bird"></li>
+
+    <!-- Google link -->
+    <li><a style="color:aliceblue;" href="https://www.google.com" target="_blank" id="google">Google</a></li>
+  </ul>
+</body>
+<script>
+  //2nd approach
+    // document.getElementById('Trees').onclick=function(){
+    //   alert('trees clicked')
+    // }
+
+    //Best & 3rd approach
+    // document.getElementById('Trees').addEventListener(click,function(){
+    //   alert('trees clicked again')
+    // })
+
+    // document.getElementById('Trees').addEventListener('click',function(e){
+    //    console.log(e);
+    // },false)
+   //false is default if we won't use also it won't be a problem
+
+   //study about this
+   //type,timestamp.defaultPrevented
+   //target,toElement,srcElement,currentTarget
+   //clientX,clientY,screenX,screenY
+   //altKey,ctrlKey,shiftLey,keyCode
+
+   //Event Propagation
+   //There are two events:EventBubbling & EventCapturing
+
+   //Event Bubbling:It prints from inside to outside
+  document.getElementById('images').addEventListener('click',function(e){
+    console.log("images clicked inside the ul");
+  },false)
+
+  document.getElementById('Mountains').addEventListener('click',function(e){
+    console.log("Mountains Clicked");
+    e.stopPropagation()   //It will stop at mountain clicked it wont go to "images clicked inside the ul"
+  },false)
+
+  document.getElementById('google').addEventListener('click',function(e){
+    console.log("Google Clicked");
+    e.preventDefault()   //It will prevent us to visit to website on clicking on link and displays the given message
+    e.stopPropagation()  //It will stop at mountain clicked it wont go to "images clicked inside the ul"
+  },false)
+
+  //To make images disappear
+  /*document.querySelector('#images').addEventListener('click',function(e){
+    //console.log(e);
+    //console.log(e.target)  //It specifies which elemnt is getting executed or getting target element
+    console.log(e.target.parentNode) //It specifies the parent of the target element
+
+    //To make the images disappear on clicking
+    let removeIt=e.target.parentNode
+    removeIt.remove()
+    //or
+    //removeIt.parentNode.removeChild(removeIt)
+  },false)*/
+
+  document.querySelector('#images').addEventListener('click',function(e){
+    console.log(e.target.tagName) //It specifies the type of the element like image:IMG,list:LI
+    if(e.target.tagName==='IMG'){
+      console.log(e.target.id);
+      let removeIt=e.target.parentNode;
+      removeIt.remove()
+    }
+
+  },false)
+
+  //Event Captoring:It prints from outside to inside
+  /*document.getElementById('images').addEventListener('click',function(e){
+    console.log("images clicked inside the ul");
+  },true)
+
+  document.getElementById('Mountains').addEventListener('click',function(e){
+    console.log("Mountains Clicked");
+  },true)*/
+
+</script>
+</html>

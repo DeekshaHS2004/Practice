@@ -1,0 +1,236 @@
+body{
+    background-image: url("mybackground.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+h1{
+    color:black;
+    font-family: "Press Start 2P","consolas",sans-serif;
+
+    border-top: dotted;
+    border-bottom: dotted;
+    border-left-style: double;
+    border-left-width: 10px;
+    border-left-color:silver;
+
+    background:linear-gradient(to top,skyblue,lightgreen);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+p{
+    color:blue;
+    font-family: "consolas",sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration:black dotted underline;
+
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: black;
+    padding:5px;
+
+    background:linear-gradient(to top,skyblue,lightgreen);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#p{
+    color:blueviolet;
+}
+.odd{
+    color:aquamarine;
+}
+.even{
+    color: aqua;
+}
+#box1{
+    border: 5px solid;
+    width:250px;
+    height: 250px;
+    font-size: 22px;
+    background: greenyellow;
+
+    /*
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50 px;
+    margin-left:auto;
+    margin-left:50%;
+    */
+    margin:50%;
+}
+#box2{
+    border: 5px solid;
+    width:250px;
+    height: 250px;
+    font-size: 22px;
+    background: blueviolet;
+
+    margin:auto;
+}
+
+img{
+    float: left;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    border: 5px solid;
+    font-size: 25px;
+    text-align: center;
+    background: tomato;
+
+    float: left;
+}
+
+p{
+    clear: left;
+}
+#box3{
+    border: 1px solid;
+    width: 300px;
+    height: 300px;
+    background-color: skyblue;
+
+    /*
+    position:static;
+    top:50px;
+    left:150px;
+
+    position:fixed;
+    top:0px;
+    right:0px;
+
+    position:sticky;
+    top:0px;
+    */
+    position:relative;
+    top:50px;
+    left:150px;
+}
+#box4{
+    border: 1px solid;
+    width: 100px;
+    height: 100px;
+    background-color: tomato;
+
+
+    position:absolute;
+    top:100px;
+    left:100px;
+
+}
+a:link{
+    color: lawngreen;
+}
+a:visited{
+    color: grey;
+}
+a:hover{
+    color:tomato;
+}
+a:active{
+    color: yellow;
+}
+button:hover{
+    background-color: lightgray;
+}
+button:active{
+    background-color: greenyellow;
+}
+/*
+li:nth-child(1){
+    background-color: aquamarine;
+}
+li:nth-child(3n){     to highlight 3 tableed number
+    background-color: aquamarine;
+}
+*/
+li:nth-child(odd){
+    background-color: aquamarine;
+}
+li:nth-child(even){
+    background-color: yellow;
+}
+h1{
+    text-shadow: 0px 0px 5px yellow,0px -5px 5px red;
+    box-shadow:  5px 5px 5px black;
+}
+h1:hover{
+    box-shadow:  5px 5px 5px black;
+}
+/*transform*/
+#box5{
+    border: 4px solid;
+    width:250px;
+    height: 250px;
+    font-size: 225px;
+    text-align: center;
+    background: lightskyblue;
+
+    transform: translateX(50px);
+    transform: translateY(50px);
+    transform: translate(50px,50px);
+    transform: rotate(180deg);
+    transform: rotateX(180deg);
+    transform: rotateY(180deg);
+    transform: rotateZ(180deg);
+    transform: scale(2,2);
+    transform: scaleX(2);
+    transform: scaleY(2);
+    transform: skew(45deg);
+
+    transform: matrix(1,0,0,1,0,0);
+}
+/*animations*/
+#box6{
+    width:250px;
+    height: 250px;
+    font-size: 225px;
+    text-align: center;
+    background: red;
+
+    /*
+    animation: myani;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in;
+    */
+    animation:myani 10s ease-in 2s infinite;
+}
+
+#box6:hover{
+    animation:myani 10s ease-in 2s infinite;
+}
+
+@keyframes myani{
+    from{margin-left:100%;}
+    to{margin-left:0%;}
+}
+
+@keyframes myrotate{
+    100%{transform: rotateX(360deg);}
+}
+
+@keyframs myopacity{
+    50%{opacity: 0;}
+}
+
+@keyframes myscale{
+    50%{transform: 0.5,0.5;}
+}
+
+@keyframes colorchange{
+    0%{background-color: aqua;}
+    20%{background-color: red;}
+    40%{background-color: yellow;}
+    60%{background-color: green;}
+    100%{background-color: black;}
+}
